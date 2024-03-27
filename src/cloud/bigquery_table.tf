@@ -1,23 +1,3 @@
-terraform {
-  required_providers {
-    google = {
-      source  = "hashicorp/google"
-      version = "~> 3.5"
-    }
-  }
-}
-
-provider "google" {
-  project = "coffee-data-tracker"
-  region  = "us-central1"
-}
-
-resource "google_bigquery_dataset" "coffee_dataset" {
-  dataset_id  = "coffee_data"
-  location    = "US"
-  description = "Dataset containing coffee brewing data."
-}
-
 resource "google_bigquery_table" "coffee_table" {
   dataset_id = google_bigquery_dataset.coffee_dataset.dataset_id
   table_id   = "coffee_tracker_results"

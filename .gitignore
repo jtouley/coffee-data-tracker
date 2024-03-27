@@ -2,4 +2,6 @@
 src/cloud/*
 
 # But not main.tf
-!src/cloud/main.tf
+!src/cloud/provider.tf
+!src/cloud/bigquery_dataset.tf
+!src/cloud/bigquery_table.tf
