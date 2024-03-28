@@ -1,0 +1,78 @@
+body,
+html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+    /* Full white background */
+    font-family: 'Roboto', sans-serif;
+}
+
+form {
+    width: 100%;
+    /* Full width of the viewport */
+    max-width: 800px;
+    /* Or however wide you want the form to be */
+    margin: auto;
+    /* Center form horizontally */
+    padding: 20px;
+    box-sizing: border-box;
+    /* Padding included in width */
+    /* Removed box-shadow and border-radius as per the image provided */
+}
+
+input[type="text"],
+input[type="number"],
+textarea,
+button {
+    width: 100%;
+    /* Full width of the form */
+    padding: 2px;
+    margin-top: 2px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    /* Light grey border as per the image */
+    box-sizing: border-box;
+    /* Padding and border included in width */
+}
+
+#coffeeReviewForm #coffee_roast {
+    display: inline-block; /* Make radio buttons and labels inline */
+  }
+
+input[type="radio"] {
+    display: inline-block;
+    margin-top: 2px;
+    /* Adjust space above the radio button if needed */
+    margin-bottom: 2px;
+    /* Tighten space between radio buttons */
+}
+
+input[type="radio"]+label {
+    display: inline-block;
+    margin-right: 10px;
+    /* Space to the right of the radio button */
+    /* You can remove the margin-bottom or set it to 0 if you want the labels closer vertically */
+    margin-bottom: 0px;
+    /* Tighten space between radio button labels */
+}
+
+label {
+    display: block;
+    margin-top: 2px;
+    font-weight: bold;
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    margin-top: 20px;
+    padding: 10px 0;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
