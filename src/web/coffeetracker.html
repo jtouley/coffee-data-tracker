@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffee Review Form</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <form id="coffeeReviewForm">
+        <label for="coffee_roaster">Coffee Roaster:</label>
+        <select id="coffee_roaster" name="coffee_roaster" required>
+            <option value="Airship">Airship</option>
+            <option value="Alma">Alma</option>
+            <option value="Anodyne">Anodyne</option>
+            <option value="Anthology Coffee">Anthology Coffee</option>
+            <option value="Atomic">Atomic</option>
+            <option value="Bean & Bean">Bean & Bean</option>
+            <option value="Bird Rock">Bird Rock</option>
+            <option value="Blueprint Coffee">Blueprint Coffee</option>
+            <option value="Boxcar">Boxcar</option>
+            <option value="Broadcast Coffee">Broadcast Coffee</option>
+            <option value="Broadsheet">Broadsheet</option>
+            <option value="Caffe Vita">Caffe Vita</option>
+            <option value="Cerberus Coffee">Cerberus Coffee</option>
+            <option value="City of Saints">City of Saints</option>
+            <option value="Common Voice">Common Voice</option>
+            <option value="Commonwealth Cafe">Commonwealth Cafe</option>
+            <option value="Counter Culture Coffee">Counter Culture Coffee</option>
+            <option value="Cuvée Coffee">Cuvée Coffee</option>
+            <option value="DOMA">DOMA</option>
+            <option value="Drink Coffee Do Stuff">Drink Coffee Do Stuff</option>
+            <option value="Dune">Dune</option>
+            <option value="Equator Coffees">Equator Coffees</option>
+            <option value="Feast">Feast</option>
+            <option value="Gimme! Coffee">Gimme! Coffee</option>
+            <option value="Good Citizen">Good Citizen</option>
+            <option value="Greater Goods">Greater Goods</option>
+            <option value="Highwire">Highwire</option>
+            <option value="Huckleberry">Huckleberry</option>
+            <option value="Intelligentsia Coffee">Intelligentsia Coffee</option>
+            <option value="Irving Farm">Irving Farm</option>
+            <option value="Joe Coffee">Joe Coffee</option>
+            <option value="Klatch Coffee">Klatch Coffee</option>
+            <option value="Kuma Coffee">Kuma Coffee</option>
+            <option value="Madcap Coffee">Madcap Coffee</option>
+            <option value="Máquina">Máquina</option>
+            <option value="Methodical Coffee">Methodical Coffee</option>
+            <option value="Metric">Metric</option>
+            <option value="Mother Tongue Coffee">Mother Tongue Coffee</option>
+            <option value="Necessary Coffee">Necessary Coffee</option>
+            <option value="Novo Coffee">Novo Coffee</option>
+            <option value="Panther Coffee">Panther Coffee</option>
+            <option value="Passenger">Passenger</option>
+            <option value="Peixoto">Peixoto</option>
+            <option value="PERC Coffee">PERC Coffee</option>
+            <option value="Portrait Coffee">Portrait Coffee</option>
+            <option value="PT's Coffee">PT's Coffee</option>
+            <option value="ReAnimator">ReAnimator</option>
+            <option value="Red Rooster">Red Rooster</option>
+            <option value="Ritual Coffee">Ritual Coffee</option>
+            <option value="Sightglass">Sightglass</option>
+            <option value="Sightseer Coffee">Sightseer Coffee</option>
+            <option value="Small Planes">Small Planes</option>
+            <option value="Sparrows Coffee">Sparrows Coffee</option>
+            <option value="Steady State">Steady State</option>
+            <option value="Sterling Coffee Roasters">Sterling Coffee Roasters</option>
+            <option value="Temple Coffee Roasters">Temple Coffee Roasters</option>
+            <option value="The Roasted Record">The Roasted Record</option>
+            <option value="Verve Coffee Roasters">Verve Coffee Roasters</option>
+            <option value="Wonderstate Coffee">Wonderstate Coffee</option>
+        </select>
+        <br>
+        <label for="coffee_roast">Coffee Roast:</label>
+        <div id="coffee_roast">
+            <label for="coffee_roast"><input type="radio" name="coffee_roast" value="Light" required> Light</label>
+            <label for="coffee_roast"><input type="radio" name="coffee_roast" value="Medium" required> Medium</label>
+            <label for="coffee_roast"><input type="radio" name="coffee_roast" value="Dark" required> Dark</label>
+            <label for="coffee_roast"><input type="radio" name="coffee_roast" value="Decaf" required> Decaf</label>
+        </div>
+
+        <label for="coffee_origin">Coffee Origin:</label>
+        <select id="coffee_origin" name="coffee_origin" required>
+            <option value="Bolivia">Bolivia</option>
+            <option value="Brazil">Brazil</option>
+            <option value="Burundi">Burundi</option>
+            <option value="Cameroon">Cameroon</option>
+            <option value="Central African Republic">Central African Republic</option>
+            <option value="China">China</option>
+            <option value="Colombia">Colombia</option>
+            <option value="Costa Rica">Costa Rica</option>
+            <option value="Cuba">Cuba</option>
+            <option value="Democratic Republic of the Congo">Democratic Republic of the Congo</option>
+            <option value="Dominican Republic">Dominican Republic</option>
+            <option value="Ecuador">Ecuador</option>
+            <option value="El Salvador">El Salvador</option>
+            <option value="Ethiopia">Ethiopia</option>
+            <option value="Gabon">Gabon</option>
+            <option value="Guatemala">Guatemala</option>
+            <option value="Guinea">Guinea</option>
+            <option value="Haiti">Haiti</option>
+            <option value="Honduras">Honduras</option>
+            <option value="India">India</option>
+            <option value="Indonesia">Indonesia</option>
+            <option value="Ivory Coast">Ivory Coast</option>
+            <option value="Jamaica">Jamaica</option>
+            <option value="Kenya">Kenya</option>
+            <option value="Laos">Laos</option>
+            <option value="Madagascar">Madagascar</option>
+            <option value="Malawi">Malawi</option>
+            <option value="Malaysia">Malaysia</option>
+            <option value="Mexico">Mexico</option>
+            <option value="Nepal">Nepal</option>
+            <option value="Nicaragua">Nicaragua</option>
+            <option value="Panama">Panama</option>
+            <option value="Papua New Guinea">Papua New Guinea</option>
+            <option value="Paraguay">Paraguay</option>
+            <option value="Peru">Peru</option>
+            <option value="Philippines">Philippines</option>
+            <option value="Rwanda">Rwanda</option>
+            <option value="Sierra Leone">Sierra Leone</option>
+            <option value="Sri Lanka">Sri Lanka</option>
+            <option value="Tanzania">Tanzania</option>
+            <option value="Thailand">Thailand</option>
+            <option value="Timor-Leste">Timor-Leste</option>
+            <option value="Trinidad and Tobago">Trinidad and Tobago</option>
+            <option value="Uganda">Uganda</option>
+            <option value="Venezuela">Venezuela</option>
+            <option value="Vietnam">Vietnam</option>
+            <option value="Yemen">Yemen</option>
+            <option value="Zambia">Zambia</option>
+            <option value="Zimbabwe">Zimbabwe</option>
+        </select>
+        <br>
+        <label for="grinder_setting">Grinder Setting:</label>
+        <select id="grinder_setting" name="grinder_setting" required>
+            <option value="">Select Setting</option>
+        </select>
+        <br>
+        <label for="coffee_dose">Coffee Dose (g):</label>
+        <select id="coffee_dose" name="coffee_dose" required>
+            <option value="">Select Dose</option>
+        </select>
+        <br>
+        <label for="coffee_yield">Coffee Yield (g):</label>
+        <input type="text" id="coffee_yield" name="coffee_yield" required>
+
+        <label for="shot_duration">Shot Duration (seconds):</label>
+        <input type="number" id="shot_duration" name="shot_duration" required>
+
+        <label for="coffee_rating">Coffee Rating:</label>
+        <div id="coffee_rating">
+            <label for="coffee_rating"><input type="radio" name="coffee_rating" value="1" required> 1</label>
+            <label for="coffee_rating"><input type="radio" name="coffee_rating" value="2" required> 2</label>
+            <label for="coffee_rating"><input type="radio" name="coffee_rating" value="3" required> 3</label>
+            <label for="coffee_rating"><input type="radio" name="coffee_rating" value="4" required> 4</label>
+            <label for="coffee_rating"><input type="radio" name="coffee_rating" value="5" required> 5</label>
+        </div>
+
+        <label for="is_latte">Is for a Latte:</label>
+        <select id="is_latte" name="is_latte" required>
+            <option value="false">No</option>
+            <option value="true">Yes</option>
+        </select>
+        <br>
+        <label for="notes">Notes:</label>
+        <textarea id="notes" name="notes" rows="4" cols="50"></textarea>
+
+        <button type="submit">Submit Review</button>
+    </form>
+
+    <script src="formscript.js"></script>
+    <script src="doseselector.js"></script>
+    <script src="grindersetting.js"></script>
+</body>
+
+</html>
