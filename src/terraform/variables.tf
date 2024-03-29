@@ -51,7 +51,3 @@ variable "environment_variables" {
   type        = map(string)
   default     = {}
 }
-
-environment_variables = {
-    COFFEE_DATA_BUCKET_NAME = google_storage_bucket.coffee_data_bucket.name
-  }
