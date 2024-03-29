@@ -9,7 +9,7 @@ resource "google_storage_bucket" "coffee_data_bucket" {
 resource "google_storage_bucket_object" "function_source" {
   name   = "coffee-data-function.zip"
   bucket = google_storage_bucket.cloud_functions_bucket.name
-  source = "cloud_function/coffee-data-function.zip"
+  source = "src/cloud_function/coffee-data-function.zip"
 }
 
 resource "random_id" "bucket_suffix" {
