@@ -1,5 +1,18 @@
-# Ignore everything in the src/cloud directory
-src/cloud/*
+# Terraform state files
+*.tfstate
+*.tfplan
+*.tfstate.*
+*.terraform.lock.hcl
+
+# Local Terraform directory
+.terraform/
+
+# Ignore secret files
+*.json
+
+# Compiled Python files
+__pycache__/
+*.py[cod]
 
 # But not main.tf
 !src/cloud/provider.tf
