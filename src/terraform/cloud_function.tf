@@ -11,6 +11,8 @@ resource "google_cloudfunctions_function" "coffee_data_function" {
 
   environment_variables = {
     GCS_BUCKET = google_storage_bucket.coffee_data_bucket.name
+    PUBSUB_TOPIC_NAME = google_pubsub_topic.coffee_data_topic.name
+    GCP_PROJECT_ID    = var.project_id
   }
 
   labels = {

@@ -21,3 +21,9 @@ variable "environment_variables" {
   type        = map(string)
   default     = {}
 }
+
+variable "project_id" {
+  description = "The Google Cloud project ID."
+  type        = string
+  default     = "coffee-data-tracker"
+}
