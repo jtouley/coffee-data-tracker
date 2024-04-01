@@ -25,7 +25,7 @@ def process_coffee_data(request):
     request_json = request.get_json()
     if request_json:
         client = storage.Client()
-        bucket = client.bucket("bucketname") #Add your bucket name here
+        bucket = client.bucket("coffee-data-c8b0") #Add your bucket name here
         blob = bucket.blob(
             f"coffee-data-{datetime.datetime.now(datetime.timezone.utc).isoformat()}.json"
         )
