@@ -2,7 +2,7 @@ terraform {
   required_providers {
     google = {
       source  = "hashicorp/google"
-      version = "~> 3.5"
+      version = "~> 5.0.0"
     }
   }
 }
@@ -10,4 +10,8 @@ terraform {
 provider "google" {
   project = "coffee-data-tracker"
   region  = "us-central1"
+}
+
+data "google_project" "project" {
+  project_id = var.project_id
 }

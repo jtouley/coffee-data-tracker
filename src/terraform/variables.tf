@@ -27,3 +27,8 @@ variable "project_id" {
   type        = string
   default     = "coffee-data-tracker"
 }
+
+variable "service_account_email" {
+  description = "Email of the service account"
+  type        = string
+}
