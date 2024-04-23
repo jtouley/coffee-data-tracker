@@ -1,7 +1,7 @@
 resource "google_bigquery_table" "coffee_table" {
   dataset_id          = google_bigquery_dataset.coffee_dataset.dataset_id
   table_id            = "coffee_tracker_results"
-  deletion_protection=false
+  deletion_protection = false
 
   description = "Stores detailed records of coffee brewing sessions including roaster, origin, brew parameters, and tasting notes."
 
@@ -85,6 +85,36 @@ resource "google_bigquery_table" "coffee_table" {
     "type": "TIMESTAMP",
     "mode": "REQUIRED",
     "description": "The timestamp when the coffee data was received and stored."
+  },
+  {
+    "name": "message_id",
+    "type": "STRING",
+    "mode": "NULLABLE",
+    "description": "Unique identifier for each message."
+  },
+  {
+    "name": "subscription_name",
+    "type": "STRING",
+    "mode": "NULLABLE",
+    "description": "Name of the Pub/Sub subscription."
+  },
+  {
+    "name": "publish_time",
+    "type": "TIMESTAMP",
+    "mode": "NULLABLE",
+    "description": "The time at which the message was published."
+  },
+  {
+    "name": "attributes",
+    "type": "STRING",
+    "mode": "NULLABLE",
+    "description": "JSON string of the message attributes."
+  },
+  {
+    "name": "data",
+    "type": "STRING",
+    "mode": "NULLABLE",
+    "description": "The raw message data as a string."
   }
 ]
 EOF

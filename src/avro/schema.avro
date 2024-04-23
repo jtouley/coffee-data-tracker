@@ -1,0 +1,18 @@
+{
+  "type": "record",
+  "name": "CoffeeData",
+  "fields": [
+    { "name": "coffee_roaster", "type": "string" },
+    { "name": "coffee_roast", "type": "string" },
+    { "name": "coffee_origin", "type": "string" },
+    { "name": "grinder_setting", "type": "float" },
+    { "name": "coffee_dose", "type": "float" },
+    { "name": "coffee_yield", "type": "float" },
+    { "name": "shot_duration", "type": "float" },
+    { "name": "coffee_rating", "type": "int" },
+    { "name": "is_latte", "type": "boolean" },
+    { "name": "notes", "type": ["null", "string"], "default": null },
+    { "name": "created_at", "type": "string" },
+    { "name": "received_at", "type": "string" }
+  ]
+}
